@@ -1,6 +1,7 @@
+import { defineConfig } from 'vite'
 import vuePlugin from '@vitejs/plugin-vue'
 
-export default {
+export default defineConfig({
   plugins: [
     vuePlugin()
   ],
@@ -8,7 +9,6 @@ export default {
     manifest: true
   },
   optimizeDeps: {
-    include: [
-    ]
+    include: []
   }
-}
+})

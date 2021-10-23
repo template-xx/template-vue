@@ -9,14 +9,16 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.0.4",
-    "vue-router": "^4.0.1",
-    "vuex": "^4.0.0-rc.2"
+    "vue": "^3.2.20",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.0.4",
+    "@vitejs/plugin-vue": "^1.9.3",
     "@vue/compiler-sfc": "^3.0.4",
-    "tailwindcss": "^1.9.6",
-    "vite": "^2.0.0-beta.10"
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.17",
+    "vite": "^2.6.10"
   }
 }
