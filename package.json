@@ -1,6 +1,5 @@
 {
-  "name": "template-vue",
-  "main": "index.js",
+  "name": "@tosslate/vue",
   "version": "1.0.1",
   "license": "MIT",
   "private": true,
@@ -11,6 +10,7 @@
   "dependencies": {
     "axios": "^0.26.1",
     "vue": "^3.2.31",
+    "vue-i18n": "^8.27.1",
     "vue-router": "^4.0.14",
     "vuex": "^4.0.2"
   },

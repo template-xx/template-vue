@@ -1,4 +1,5 @@
 module.exports = {
+  // prettier-ignore
   content: [
     './src/**/*.vue'
   ],

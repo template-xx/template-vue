@@ -6,8 +6,11 @@ export default createStore({
       page: {}
     }
   },
+  getters: {},
+  actions: {},
   mutations: {
     getPage(state, payload) {
     }
-  }
+  },
+  modules: {}
 })
