@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import App from './app.vue'
 import store from './store'
 import routes from './routes/all'
+import i18n from './plugins/i18n'
 import './styles/tailwind.css'
 import './styles/index.css'
 
@@ -12,6 +13,7 @@ const router = createRouter({
   routes
 })
 
+app.use(i18n)
 app.use(store)
 app.use(router)
 app.mount('#app')
