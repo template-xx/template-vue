@@ -3,14 +3,25 @@ import { createStore } from 'vuex'
 export default createStore({
   state() {
     return {
-      page: {}
+      page: {},
+      site: {}
     }
   },
   getters: {},
   actions: {},
-  mutations: {
-    getPage(state, payload) {
+  modules: {
+    pokemon: {
+      state() {
+        return {
+          data: {}
+        }
+      },
+      mutations: {
+        getData(state, payload) {
+          state.data = payload
+        }
+      },
+      namespaced: true
     }
-  },
-  modules: {}
+  }
 })

@@ -2,7 +2,7 @@
   <default-layout>
     <div class="p-4">
       <div class="flex flex-col">
-        <p class="leading-loose">抱歉，没有找到对应的页面</p>
+        <p class="leading-loose">{{ $t('page.not_found') }}</p>
       </div>
     </div>
   </default-layout>
@@ -17,7 +17,7 @@ export default {
     DefaultLayout,
   },
   beforeCreate() {
-    head.title('抱歉，没有找到对应的页面')
+    head.title(this.$i18n.t('page.not_found'))
   }
 }
 </script>
