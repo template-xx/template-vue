@@ -10,5 +10,14 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: []
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://tossd.vercel.app',
+        rewrite: (path) => path.replace(/^\/api/, ''),
+        changeOrigin: true
+      }
+    }
   }
 })
