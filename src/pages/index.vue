@@ -13,7 +13,7 @@
   const store = useStore()
   const items = computed(() => store.state.pokemon.data)
 
-  axios.get('/pokemon/index.json').then(({ data }) => {
+  axios.get('/pokemon').then(({ data }) => {
     store.commit('pokemon/getData', data)
   })
 </script>
