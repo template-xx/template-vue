@@ -6,14 +6,7 @@
   <default-footer></default-footer>
 </template>
 
-<script>
-import DefaultHeader from '../components/header.vue'
-import DefaultFooter from '../components/footer.vue'
-
-export default {
-  components: {
-    DefaultHeader,
-    DefaultFooter
-  }
-}
+<script setup>
+  import DefaultHeader from '../components/header.vue'
+  import DefaultFooter from '../components/footer.vue'
 </script>
