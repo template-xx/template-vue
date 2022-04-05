@@ -5,15 +5,22 @@
 </template>
 
 <script setup>
-  import Pokemon from '../components/pokemon/index.vue'
+  import head from '../plugins/head'
   import axios from '../plugins/axios'
+  import Pokemon from '../components/pokemon/index.vue'
+  import { computed, onBeforeMount, onMounted } from 'vue'
   import { useStore } from 'vuex'
-  import { computed } from 'vue'
 
   const store = useStore()
   const items = computed(() => store.state.pokemon.data)
 
-  axios.get('/pokemon').then(({ data }) => {
-    store.commit('pokemon/getData', data)
+  onBeforeMount(() => {
+    head.title('Pokemon')
+  })
+
+  onMounted(() => {
+    axios.get('/pokemon').then(({ data }) => {
+      store.commit('pokemon/getData', data)
+    })
   })
 </script>

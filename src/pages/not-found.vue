@@ -8,16 +8,15 @@
   </default-layout>
 </template>
 
-<script>
-import head from '../plugins/head'
-import DefaultLayout from '../layouts/default.vue'
+<script setup>
+  import head from '../plugins/head'
+  import DefaultLayout from '../layouts/default.vue'
+  import { onBeforeMount } from 'vue'
+  import { useI18n } from 'vue-i18n'
 
-export default {
-  components: {
-    DefaultLayout,
-  },
-  beforeCreate() {
-    head.title(this.$i18n.t('page.not_found'))
-  }
-}
+  const i18n = useI18n()
+
+  onBeforeMount(() => {
+    head.title(i18n.t('page.not_found'))
+  })
 </script>
