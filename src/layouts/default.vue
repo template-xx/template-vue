@@ -7,6 +7,6 @@
 </template>
 
 <script setup>
-  import DefaultHeader from '../components/header.vue'
-  import DefaultFooter from '../components/footer.vue'
+import DefaultHeader from '../components/header.vue'
+import DefaultFooter from '../components/footer.vue'
 </script>

@@ -9,14 +9,14 @@
 </template>
 
 <script setup>
-  import head from '../plugins/head'
-  import DefaultLayout from '../layouts/default.vue'
-  import { onBeforeMount } from 'vue'
-  import { useI18n } from 'vue-i18n'
+import head from '../plugins/head'
+import DefaultLayout from '../layouts/default.vue'
+import { onBeforeMount } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-  const i18n = useI18n()
+const i18n = useI18n()
 
-  onBeforeMount(() => {
-    head.title(i18n.t('page.not_found'))
-  })
+onBeforeMount(() => {
+  head.title(i18n.t('page.not_found'))
+})
 </script>
