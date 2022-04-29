@@ -3,7 +3,7 @@ import vuePlugin from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [
-    vuePlugin()
+    vuePlugin() // prettier-ignore
   ],
   build: {
     manifest: true
@@ -14,7 +14,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://tossd.vercel.app',
+        target: 'https://tosslate.vercel.app',
         rewrite: (path) => path.replace(/^\/api/, ''),
         changeOrigin: true
       }
