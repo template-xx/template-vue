@@ -1,12 +1,17 @@
 <template>
   <div ref="cards">
-    <Pokemon :data="items" />
+    <Center v-if="items.length === 0" class="h-32">
+      <Loader class="text-cyan-700" />
+    </Center>
+    <Pokemon v-else :data="items" />
   </div>
 </template>
 
 <script setup>
 import head from '../plugins/head'
 import axios from '../plugins/axios'
+import Center from '../components/center.vue'
+import Loader from '../components/loader.vue'
 import Pokemon from '../components/pokemon/index.vue'
 import { computed, ref, onBeforeMount, onMounted, onUpdated } from 'vue'
 import { useStore } from 'vuex'
