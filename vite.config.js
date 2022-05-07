@@ -10,14 +10,5 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: []
-  },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://tosslate.vercel.app',
-        rewrite: (path) => path.replace(/^\/api/, ''),
-        changeOrigin: true
-      }
-    }
   }
 })

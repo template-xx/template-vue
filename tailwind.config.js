@@ -1,7 +1,6 @@
 module.exports = {
-  // prettier-ignore
   content: [
-    './src/**/*.vue'
+    './src/**/*.vue' // prettier-ignore
   ],
   theme: {
     extend: {}
