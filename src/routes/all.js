@@ -1,5 +1,5 @@
-import notFoundPage from '../pages/not-found.vue'
 import indexPage from '../pages/index.vue'
+import notFoundPage from '../pages/not-found.vue'
 
 export default [
   {

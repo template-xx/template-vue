@@ -5,5 +5,5 @@
 </template>
 
 <script setup>
-import DefaultLogo from './logo.vue'
+import Logo from './logo.vue'
 </script>

@@ -1,9 +1,9 @@
 <template>
-  <div ref="cards">
-    <Center v-if="items.length === 0" class="h-32">
-      <Loader class="text-cyan-700" />
-    </Center>
-    <Pokemon v-else :data="items" />
+  <Center v-if="items.length === 0" class="h-32">
+    <Loader class="text-cyan-700" />
+  </Center>
+  <div v-else ref="cards">
+    <Pokemon :data="items" />
   </div>
 </template>
 

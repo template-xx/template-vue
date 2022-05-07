@@ -1,9 +1,11 @@
 <template>
-  <default-header></default-header>
-  <div class="max-w-4xl mx-auto">
-    <slot></slot>
+  <div class="min-h-screen">
+    <default-header></default-header>
+    <main class="max-w-4xl mx-auto">
+      <slot></slot>
+    </main>
+    <default-footer></default-footer>
   </div>
-  <default-footer></default-footer>
 </template>
 
 <script setup>

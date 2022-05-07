@@ -4,4 +4,6 @@
   </footer>
 </template>
 
-<script setup></script>
+<script setup>
+defineProps({ copyright: String })
+</script>

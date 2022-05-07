@@ -1,6 +1,6 @@
 <template>
   <default-layout>
-    <Center class="min-h-screen">
+    <Center height="calc(100vh - 100px)">
       <div class="flex items-center divide-x divide-zinc-500">
         <h3 class="text-2xl text-zinc-700 pr-4">404</h3>
         <p class="text-sm text-zinc-700 pl-4 py-2">
