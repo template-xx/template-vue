@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import DefaultHeader from '../components/header.vue'
 import DefaultFooter from '../components/footer.vue'
 </script>

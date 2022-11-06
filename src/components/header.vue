@@ -4,6 +4,6 @@
   </header>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import Logo from './logo.vue'
 </script>

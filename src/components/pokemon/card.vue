@@ -21,7 +21,7 @@
   </router-link>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref } from 'vue'
 defineProps({ item: Object })
 

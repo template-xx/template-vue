@@ -2,6 +2,6 @@
   <router-view></router-view>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { onBeforeMount } from 'vue'
 </script>

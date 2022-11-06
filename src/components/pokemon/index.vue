@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import Card from './card.vue'
 defineProps({ data: Object })
 </script>

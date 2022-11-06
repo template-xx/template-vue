@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import head from '../plugins/head'
 import axios from '../plugins/axios'
 import Center from '../components/center.vue'
