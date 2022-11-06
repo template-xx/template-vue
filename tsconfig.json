@@ -13,5 +13,5 @@
     "jsx": "preserve",
     "noEmit": true
   },
-  "include": ["src/**/*.vue", "src/**/*.tsx", "src/**/*.ts", "src/**/*.d.ts"]
+  "include": ["src/env.d.ts", "src/**/*.vue", "src/**/*"]
 }

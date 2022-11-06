@@ -11,7 +11,7 @@
   </default-layout>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import head from '../plugins/head'
 import Center from '../components/center.vue'
 import DefaultLayout from '../layouts/default.vue'

@@ -14,6 +14,7 @@ const messages = {
 }
 
 export default createI18n({
+  allowComposition: true,
   locale: 'zh_CN',
   messages
 })
