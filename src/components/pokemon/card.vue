@@ -21,10 +21,12 @@
   </router-link>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { ref } from 'vue'
-defineProps({ item: Object })
+defineProps<{
+  item: any
+}>()
 
 const isLoading = ref(true)
-const setLoading = (value) => (isLoading.value = value)
+const setLoading = (value: boolean) => (isLoading.value = value)
 </script>

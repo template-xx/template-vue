@@ -4,6 +4,8 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-defineProps({ height: String })
+<script setup lang="ts">
+defineProps<{
+  height?: string
+}>()
 </script>

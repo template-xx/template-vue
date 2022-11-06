@@ -4,6 +4,8 @@
   </footer>
 </template>
 
-<script lang="ts" setup>
-defineProps({ copyright: String })
+<script setup lang="ts">
+defineProps<{
+  copyright?: string
+}>()
 </script>

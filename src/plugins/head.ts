@@ -1,5 +1,5 @@
 class Head {
-  title(value) {
+  title(value: string) {
     document.title = value
     return this
   }
