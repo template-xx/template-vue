@@ -13,12 +13,13 @@
     "axios": "^0.26.1",
     "better-scroll": "^2.5.0",
     "dayjs": "^1.11.6",
+    "pinia": "^2.0.23",
     "vue": "^3.2.41",
     "vue-i18n": "^9.2.2",
-    "vue-router": "^4.1.6",
-    "vuex": "^4.1.0"
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@types/node": "^18.11.9",
     "@vitejs/plugin-vue": "^3.2.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.18",

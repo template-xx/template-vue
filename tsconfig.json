@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
+    "target": "ES2020",
+    "module": "ES2020",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -9,7 +9,7 @@
     "noImplicitThis": true,
     "skipLibCheck": true,
     "useDefineForClassFields": true,
-    "lib": ["ESNext", "DOM"],
+    "lib": ["ES2020", "DOM"],
     "jsx": "preserve",
     "noEmit": true
   },
