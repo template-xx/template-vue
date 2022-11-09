@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export default axios.create({
-  baseURL: 'https://tosslate.vercel.app'
+  baseURL: import.meta.env['VITE_TOSSLATE_URL'] || 'https://tosslate.vercel.app'
 })
