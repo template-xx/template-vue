@@ -1,6 +1,6 @@
 <template>
   <page-layout>
-    <div ref="cards">
+    <div class="px-6 pt-2 pb-6 xl:pb-8" ref="cards">
       <template v-if="data">
         <Pokemon :pages="data.pages" />
       </template>
