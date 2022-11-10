@@ -18,8 +18,8 @@ import Loader from '../components/loader.vue'
 import Center from '../components/center.vue'
 import Pokemon from '../components/pokemon/index.vue'
 import PageLayout from '../layouts/page.vue'
-import { ref, watch, nextTick, onBeforeMount } from 'vue'
 import { useInfiniteQuery } from '@tanstack/vue-query'
+import { ref, watch, nextTick, onBeforeMount } from 'vue'
 
 const cards = ref(null)
 const observer = new IntersectionObserver(
