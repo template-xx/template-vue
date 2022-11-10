@@ -2,7 +2,7 @@
   <router-link class="group" :to="'/'">
     <div
       class="overflow-hidden rounded-lg bg-gray-200 aspect-square w-full mb-2"
-      :style="{ backgroundColor: item.color }"
+      :style="{ backgroundColor: data.color }"
     >
       <img
         :class="[
@@ -11,21 +11,19 @@
             ? 'scale-110 blur-2xl grayscale'
             : 'scale-100 blur-0 grayscale-0'
         ]"
-        :alt="item.name"
-        :src="item.imageUrl"
+        :alt="data.name"
+        :src="data.imageUrl"
         @load="setLoading(false)"
       />
     </div>
-    <h3 class="font-medium text-lg text-zinc-700">{{ item.name }}</h3>
-    <p class="text-sm text-zinc-500">{{ item.genus }}</p>
+    <h3 class="font-medium text-lg text-zinc-700">{{ data.name }}</h3>
+    <p class="text-sm text-zinc-500">{{ data.genus }}</p>
   </router-link>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-defineProps<{
-  item: any
-}>()
+defineProps<{ data: any }>()
 
 const isLoading = ref(true)
 const setLoading = (value: boolean) => (isLoading.value = value)

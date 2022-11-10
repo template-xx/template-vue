@@ -5,7 +5,5 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  height?: string
-}>()
+defineProps<{ height?: string }>()
 </script>

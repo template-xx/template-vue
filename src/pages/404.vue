@@ -3,7 +3,7 @@
     <Center height="calc(100vh - 100px)">
       <div class="flex items-center divide-x divide-zinc-500">
         <h3 class="text-2xl text-zinc-700 pr-4">404</h3>
-        <p class="text-sm text-zinc-700 pl-4 py-2">
+        <p class="text-zinc-700 pl-4 py-2">
           {{ $t('page.not_found') }}
         </p>
       </div>
@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import head from '../plugins/head'
+import head from '../helpers/head'
 import Center from '../components/center.vue'
 import DefaultLayout from '../layouts/default.vue'
 import { onBeforeMount } from 'vue'

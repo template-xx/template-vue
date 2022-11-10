@@ -5,7 +5,5 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  copyright?: string
-}>()
+defineProps<{ copyright?: string }>()
 </script>

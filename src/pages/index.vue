@@ -1,18 +1,21 @@
 <template>
-  <Center v-if="[].length === 0" class="h-32">
-    <Loader class="text-cyan-700" />
-  </Center>
-  <div v-else ref="cards">
-    <Pokemon :data="[]" />
-  </div>
+  <page-layout>
+    <Center v-if="[].length === 0" class="h-32">
+      <Loader class="text-cyan-700" />
+    </Center>
+    <div v-else ref="cards">
+      <Pokemon :data="[]" />
+    </div>
+  </page-layout>
 </template>
 
 <script setup lang="ts">
-import head from '../plugins/head'
-import axios from '../plugins/axios'
+import head from '../helpers/head'
+import axios from '../helpers/axios'
 import Center from '../components/center.vue'
 import Loader from '../components/loader.vue'
 import Pokemon from '../components/pokemon/index.vue'
+import PageLayout from '../layouts/page.vue'
 import { useQuery } from '@tanstack/vue-query'
 import { computed, ref, onBeforeMount, onMounted, onUpdated } from 'vue'
 
