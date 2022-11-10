@@ -5,7 +5,7 @@
         <Pokemon :pages="data.pages" />
       </template>
     </div>
-    <Center v-if="isLoading" class="h-32">
+    <Center v-if="isLoading || isFetchingNextPage" class="h-32">
       <Loader class="text-cyan-700" />
     </Center>
   </page-layout>
@@ -34,11 +34,13 @@ const observer = new IntersectionObserver(
   { threshold: 0 }
 )
 
-const { isLoading, data, fetchNextPage } = useInfiniteQuery({
-  queryFn: listCards,
-  queryKey: ['cards'],
-  getNextPageParam: (lastPage) => lastPage.nextCursor
-})
+const { isLoading, data, isFetchingNextPage, fetchNextPage } = useInfiniteQuery(
+  {
+    queryFn: listCards,
+    queryKey: ['cards'],
+    getNextPageParam: (lastPage) => lastPage.nextCursor
+  }
+)
 
 async function listCards({ pageParam = 0 }) {
   const { data: cards } = await axios.get(`/pokemon?offset=${pageParam}`)
