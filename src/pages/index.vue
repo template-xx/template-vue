@@ -1,8 +1,10 @@
 <template>
   <page-layout>
-    <template v-if="data" ref="cards">
-      <Pokemon :pages="data.pages" />
-    </template>
+    <div ref="cards">
+      <template v-if="data">
+        <Pokemon :pages="data.pages" />
+      </template>
+    </div>
     <Center v-if="isLoading" class="h-32">
       <Loader class="text-cyan-700" />
     </Center>
@@ -16,19 +18,8 @@ import Loader from '../components/loader.vue'
 import Center from '../components/center.vue'
 import Pokemon from '../components/pokemon/index.vue'
 import PageLayout from '../layouts/page.vue'
+import { ref, watch, nextTick, onBeforeMount } from 'vue'
 import { useInfiniteQuery } from '@tanstack/vue-query'
-import { computed, ref, onBeforeMount, onMounted, onUpdated } from 'vue'
-
-async function listCards({ pageParam = 0 }) {
-  const { data } = await axios.get(`/pokemon?offset=${pageParam}`)
-  return data
-}
-
-const { isLoading, data, fetchNextPage } = useInfiniteQuery({
-  queryKey: ['cards'],
-  queryFn: listCards,
-  getNextPageParam: (lastPage) => lastPage?.id
-})
 
 const cards = ref(null)
 const observer = new IntersectionObserver(
@@ -36,21 +27,35 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         observer.unobserve(entry.target)
+        fetchNextPage()
       }
     })
   },
   { threshold: 0 }
 )
 
-onBeforeMount(() => {
-  head.title('Pokemon')
+const { isLoading, data, fetchNextPage } = useInfiniteQuery({
+  queryFn: listCards,
+  queryKey: ['cards'],
+  getNextPageParam: (lastPage) => lastPage.nextCursor
 })
 
-onUpdated(() => {
-  const lastCard = cards.value.querySelector('a:last-child')
+async function listCards({ pageParam = 0 }) {
+  const { data: cards } = await axios.get(`/pokemon?offset=${pageParam}`)
+  const nextCursor = cards[cards.length - 1]?.id
+  return { cards, nextCursor }
+}
 
-  if (lastCard) {
-    observer.observe(lastCard)
-  }
+watch(data, () => {
+  nextTick(() => {
+    const lastCard = cards.value?.querySelector('a:last-child')
+    if (lastCard) {
+      observer.observe(lastCard)
+    }
+  })
+})
+
+onBeforeMount(() => {
+  head.title('Pokemon')
 })
 </script>

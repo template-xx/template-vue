@@ -4,7 +4,7 @@
       class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
     >
       <template v-for="page in pages">
-        <Card v-for="card in page" :key="card.id" :data="card" />
+        <Card v-for="card in page.cards" :key="card.id" :data="card" />
       </template>
     </div>
   </div>
