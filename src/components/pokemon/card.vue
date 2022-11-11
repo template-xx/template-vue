@@ -1,7 +1,7 @@
 <template>
   <router-link class="group" :to="'/'">
     <div
-      class="overflow-hidden rounded bg-zinc-100 border border-zinc-300 aspect-square w-full mb-2"
+      class="overflow-hidden rounded bg-zinc-100 aspect-square w-full mb-2"
       :style="{ backgroundColor: data.color }"
     >
       <img
