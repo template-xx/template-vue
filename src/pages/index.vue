@@ -40,7 +40,8 @@ const { isLoading, data, isFetchingNextPage, fetchNextPage } = useInfiniteQuery(
   {
     queryFn: listCards,
     queryKey: ['cards'],
-    getNextPageParam: (lastPage) => lastPage.nextCursor
+    getNextPageParam: (lastPage) => lastPage.nextCursor,
+    refetchOnWindowFocus: false
   }
 )
 

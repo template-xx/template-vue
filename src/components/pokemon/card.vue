@@ -14,10 +14,13 @@
         @load="setLoading(false)"
       />
     </div>
-    <h3 class="font-medium text-slate-700 mb-1 group-hover:underline">
-      {{ data.name }}
+    <h3 class="text-base text-neutral-700">
+      <span
+        class="duration-200 ease-in-out transition-[background-size] bg-gradient-to-r from-sky-300 to-lime-300 bg-left-bottom bg-no-repeat bg-[length:0px_3px] group-hover:bg-[length:100%_3px]"
+        >{{ data.name }}</span
+      >
     </h3>
-    <p class="font-mono text-sm text-slate-500 truncate">{{ data.genus }}</p>
+    <p class="text-sm text-neutral-400 truncate">{{ data.genus }}</p>
   </div>
 </template>
 

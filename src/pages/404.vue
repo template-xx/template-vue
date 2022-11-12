@@ -1,9 +1,9 @@
 <template>
   <default-layout>
     <Center height="calc(100vh - 100px)">
-      <div class="flex items-center divide-x divide-zinc-500">
-        <h3 class="text-2xl text-zinc-700 pr-4">404</h3>
-        <p class="text-zinc-700 pl-4 py-2">
+      <div class="flex items-center divide-x divide-zinc-300">
+        <h3 class="text-2xl text-zinc-600 pr-4">🙁</h3>
+        <p class="text-zinc-600 pl-4 py-2">
           {{ $t('page.not_found') }}
         </p>
       </div>
