@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen">
     <default-header></default-header>
-    <main class="max-w-6xl mx-auto">
+    <main>
       <slot></slot>
     </main>
     <default-footer></default-footer>

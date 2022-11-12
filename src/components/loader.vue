@@ -1,8 +1,8 @@
 <template>
   <ul class="flex justify-center list-none space-x-1">
-    <li class="bg-zinc-400 opacity-0 rounded w-2 h-2 dots-1"></li>
-    <li class="bg-zinc-400 opacity-0 rounded w-2 h-2 dots-2"></li>
-    <li class="bg-zinc-400 opacity-0 rounded w-2 h-2 dots-3"></li>
+    <li class="bg-teal-400 opacity-0 rounded w-2 h-2 dots-1"></li>
+    <li class="bg-teal-400 opacity-0 rounded w-2 h-2 dots-2"></li>
+    <li class="bg-teal-400 opacity-0 rounded w-2 h-2 dots-3"></li>
   </ul>
 </template>
 

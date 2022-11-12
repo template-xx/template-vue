@@ -2,7 +2,7 @@
   <header>
     <div class="max-w-6xl mx-auto">
       <div class="flex justify-between">
-        <Logo class="px-4" title="Pokemon" />
+        <Logo class="ml-6" title="Pokémon" />
       </div>
     </div>
   </header>

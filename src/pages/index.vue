@@ -1,12 +1,14 @@
 <template>
   <page-layout>
-    <div class="px-6 pt-2 pb-6 xl:pb-8" ref="cards">
-      <template v-if="data">
-        <Pokemon :pages="data.pages" />
-      </template>
+    <div class="max-w-6xl mx-auto">
+      <div class="p-6 pt-2" ref="cards">
+        <template v-if="data">
+          <Pokemon :pages="data.pages" />
+        </template>
+      </div>
     </div>
     <Center v-if="isLoading || isFetchingNextPage" class="h-32">
-      <Loader class="text-cyan-700" />
+      <Loader />
     </Center>
   </page-layout>
 </template>
@@ -50,7 +52,7 @@ async function listCards({ pageParam = 0 }) {
 
 watch(data, () => {
   nextTick(() => {
-    const lastCard = cards.value?.querySelector('a:last-child')
+    const lastCard = cards.value?.querySelector('.group:last-child')
     if (lastCard) {
       observer.observe(lastCard)
     }
