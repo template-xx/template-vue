@@ -53,7 +53,7 @@ async function listCards({ pageParam = 0 }) {
 
 watch(data, () => {
   nextTick(() => {
-    const lastCard = cards.value?.querySelector('.group:last-child')
+    const lastCard = cards.value?.querySelector('a.group:last-child')
     if (lastCard) {
       observer.observe(lastCard)
     }

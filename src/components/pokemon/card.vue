@@ -1,5 +1,5 @@
 <template>
-  <div class="group antialiased">
+  <router-link class="group" :to="`/pokemon/${data.id}`">
     <div
       class="overflow-hidden rounded aspect-square shadow-lg w-full mb-2"
       :style="{ backgroundColor: data.color }"
@@ -16,7 +16,7 @@
     </div>
     <h3 class="text-base text-neutral-700">{{ data.name }}</h3>
     <p class="text-sm text-neutral-400 truncate">{{ data.genus }}</p>
-  </div>
+  </router-link>
 </template>
 
 <script setup lang="ts">
