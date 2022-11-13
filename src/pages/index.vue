@@ -61,6 +61,6 @@ watch(data, () => {
 })
 
 onBeforeMount(() => {
-  head.title('Pokemon')
+  head.title('Pokémon')
 })
 </script>
