@@ -21,7 +21,7 @@ import Center from '../components/center.vue'
 import Pokemon from '../components/pokemon/index.vue'
 import PageLayout from '../layouts/page.vue'
 import { useInfiniteQuery } from '@tanstack/vue-query'
-import { ref, watch, nextTick, onBeforeMount } from 'vue'
+import { ref, watch, nextTick, onBeforeMount, onMounted } from 'vue'
 
 const cards = ref(null)
 const observer = new IntersectionObserver(
@@ -40,27 +40,35 @@ const { isLoading, data, isFetchingNextPage, fetchNextPage } = useInfiniteQuery(
   {
     queryFn: listCards,
     queryKey: ['cards'],
-    getNextPageParam: (lastPage) => lastPage.nextCursor,
-    refetchOnWindowFocus: false
+    getNextPageParam: (lastPage) => lastPage.nextCursor
   }
 )
 
 async function listCards({ pageParam = 0 }) {
-  const { data: cards } = await axios.get(`/pokemon?offset=${pageParam}`)
+  const { data: cards } = await axios.get(
+    `/pokemon?offset=${pageParam}&limit=60`
+  )
   const nextCursor = cards[cards.length - 1]?.id
   return { cards, nextCursor }
 }
 
+function queryLastCard() {
+  return cards.value?.querySelector('.group:last-child')
+}
+
 watch(data, () => {
   nextTick(() => {
-    const lastCard = cards.value?.querySelector('a.group:last-child')
-    if (lastCard) {
-      observer.observe(lastCard)
-    }
+    const card = queryLastCard()
+    card && observer.observe(card)
   })
 })
 
 onBeforeMount(() => {
   head.title('Pokémon')
+})
+
+onMounted(() => {
+  const card = queryLastCard()
+  card && observer.observe(card)
 })
 </script>
