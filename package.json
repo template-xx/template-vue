@@ -1,0 +1,31 @@
+{
+  "name": "@tosslate/vue",
+  "version": "1.0.2",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@splidejs/vue-splide": "^0.6.12",
+    "@tanstack/vue-query": "^4.14.5",
+    "axios": "^0.26.1",
+    "better-scroll": "^2.5.0",
+    "dayjs": "^1.11.6",
+    "pinia": "^2.0.23",
+    "vue": "^3.2.41",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.18",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.2.2",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.2"
+  }
+}
