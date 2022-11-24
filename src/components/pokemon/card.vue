@@ -4,11 +4,11 @@
       class="overflow-hidden rounded shadow-lg mb-2"
       :style="{ backgroundColor: data.color }"
     >
-      <div class="rounded shadow-inner p-4">
-        <div class="duration-150 ease-out group-hover:scale-110">
+      <div class="rounded shadow-inner aspect-square w-full p-4">
+        <div class="transition group-hover:scale-110">
           <img
             :class="[
-              'duration-300 ease-out object-cover aspect-square',
+              'transition duration-300 ease-out object-cover',
               isLoading ? '-translate-y-6 scale-90' : 'translate-y-0 scale-100'
             ]"
             :alt="data.name"
