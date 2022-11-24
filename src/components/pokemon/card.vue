@@ -1,18 +1,20 @@
 <template>
   <router-link class="group" :to="`/pokemon/${data.id}`">
     <div
-      class="overflow-hidden rounded aspect-square shadow-lg w-full mb-2"
+      class="overflow-hidden rounded shadow-lg mb-2"
       :style="{ backgroundColor: data.color }"
     >
-      <img
-        :class="[
-          'duration-200 ease-in-out rounded object-cover shadow-inner group-hover:scale-105',
-          isLoading ? '-translate-y-6 scale-95' : 'translate-y-0 scale-100'
-        ]"
-        :alt="data.name"
-        :src="data.imageUrl"
-        @load="setLoading(false)"
-      />
+      <div class="rounded shadow-inner p-4">
+        <img
+          :class="[
+            'duration-300 ease-out object-cover aspect-square group-hover:scale-110',
+            isLoading ? '-translate-y-6 scale-90' : 'translate-y-0 scale-100'
+          ]"
+          :alt="data.name"
+          :src="data.imageUrl"
+          @load="setLoading(false)"
+        />
+      </div>
     </div>
     <h3 class="text-base text-neutral-700">{{ data.name }}</h3>
     <p class="text-sm text-neutral-400 truncate">{{ data.genus }}</p>
