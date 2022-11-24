@@ -4,11 +4,8 @@
       class="overflow-hidden rounded shadow-lg mb-2"
       :style="{ backgroundColor: data.color }"
     >
-      <div class="relative rounded shadow-inner p-4">
-        <img class="invisible w-full" src="/placeholder.png" />
-        <div
-          class="absolute inset-4 duration-150 ease-out group-hover:scale-110"
-        >
+      <div class="rounded shadow-inner p-4">
+        <div class="duration-150 ease-out group-hover:scale-110">
           <img
             :class="[
               'duration-300 ease-out object-cover aspect-square',
